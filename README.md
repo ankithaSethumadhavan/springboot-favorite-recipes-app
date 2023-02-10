@@ -8,99 +8,100 @@ This is a Spring boot rest application that allows user to manage their favorite
 
 **Fetch all recipes :-**
 
-GET /food/recipes
+    GET /food/recipes
 
-Accept: application/json
+    Accept: application/json
 
-Content-Type: application/json
+    Content-Type: application/json
 
-Parameters :- No parameters
+    Parameters :- No parameters
 
-RESPONSE: HTTP 200 (OK)
+    RESPONSE: HTTP 200 (OK)
 
 **Fetch Recipe by its Id :-**
 
-GET /food/recipes/{id}
+    GET /food/recipes/{id}
 
-Accept: application/json
+    Accept: application/json
 
-Content-Type: application/json
+    Content-Type: application/json
 
-Parameters :- {id} required
+    Parameters :- {id} required
 
-RESPONSE: HTTP 200 (OK)
+    RESPONSE: HTTP 200 (OK)
 
 **Fetch Recipe by parameters:-**
 
-POST /food/fetchRecipeByParams
+    POST /food/fetchRecipeByParams
 
-Accept: application/json
+    Accept: application/json
 
-Content-Type: application/json
+    Content-Type: application/json
 
-Parameters :-
+    Parameters :-
 
-Input Request :-
+    Input Request :-
 
-{
+    {
 
-"dishId": 0,
+    "dishId": 0,
 
-"dishName": "string",
+    "dishName": "string",
 
-"foodType": "string",
+    "foodType": "string",
 
-"numOfServings": 0,
+    "numOfServings": 0,
 
-"recipe": "string"
+    "recipe": "string"
 
-}
+    }
 
-RESPONSE: HTTP 200 (OK)
+    RESPONSE: HTTP 200 (OK)
 
 **Add /Update Recipe :-**
 
-POST /food/addRecipe
+    POST /food/addRecipe
 
-Accept: application/json
+    Accept: application/json
 
-Content-Type: application/json
+    Content-Type: application/json
 
-Parameters :-
+    Parameters :-
 
-Input Request :-
+    Input Request :-
 
-{
+    {
 
-"dishId": 0,
+    "dishId": 0,
 
-"dishName": "string",
+    "dishName": "string",
 
-"foodType": "string",
+    "foodType": "string",
 
-"numOfServings": 0,
+    "numOfServings": 0,
 
-"recipe": "string"
+    "recipe": "string"
 
-}
+    }
 
-RESPONSE: HTTP 200 (OK)
+    RESPONSE: HTTP 200 (OK)
 
 **Delete Recipe :-**
 
-POST /food/deleteRecipe/{dishId}
+    POST /food/deleteRecipe/{dishId}
 
-Accept: application/json
+    Accept: application/json
 
-Content-Type: application/json
+    Content-Type: application/json
 
-Parameters :- {dishId} required
+    Parameters :- {dishId} required
 
-RESPONSE: HTTP 200 (OK)
+    RESPONSE: HTTP 200 (OK)
+    
 
 **To view Swagger 2 API docs**
 
-Run the server and browse to [http://localhost:9099/swagger-ui/index.html#/](http://localhost:9099/swagger-ui/index.html#/)
+ Run the server and browse to [http://localhost:9099/swagger-ui/index.html#/](http://localhost:9099/swagger-ui/index.html#/)
 
 **To view your H2 in-memory database**
 
