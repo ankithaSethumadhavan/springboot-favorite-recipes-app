@@ -29,7 +29,7 @@ public class IntegrationTests {
 	public void addRecipeTest() throws JSONException {
 		
 		 FoodInfo recipeOne = new FoodInfo("Carrot Salad",1, "Carrots, almonds, raisins and spring onions work together to create a gorgeous desserts",
-					"Veg","4");
+					"Veg",4);
 		 
 		String expectedResp = "{\r\n"
 				+ "    \"data\": {\r\n"
@@ -37,7 +37,7 @@ public class IntegrationTests {
 				+ "        \"dishName\": \"Carrot Salad\",\r\n"
 				+ "        \"recipe\": \"Carrots, almonds, raisins and spring onions work together to create a gorgeous desserts\",\r\n"
 				+ "        \"foodType\": \"Veg\",\r\n"
-				+ "        \"numOfServings\": \"4\"\r\n"
+				+ "        \"numOfServings\": 4\r\n"
 				+ "    },\r\n"
 				+ "    \"message\": \"Successfully added data!\",\r\n"
 				+ "    \"status\": 200\r\n"
@@ -65,7 +65,7 @@ public class IntegrationTests {
 				+ "        \"dishName\": \"Carrot Salad\",\r\n"
 				+ "        \"recipe\": \"Carrots, almonds, raisins and spring onions work together to create a gorgeous desserts\",\r\n"
 				+ "        \"foodType\": \"Veg\",\r\n"
-				+ "        \"numOfServings\": \"4\"\r\n"
+				+ "        \"numOfServings\": 4\r\n"
 				+ "    },\r\n"
 				+ "    \"message\": \"Successfully Retrieved data!\",\r\n"
 				+ "    \"status\": 200\r\n"
@@ -90,7 +90,7 @@ public class IntegrationTests {
 				+ "            \"dishName\": \"Carrot Salad\",\r\n"
 				+ "            \"recipe\": \"Carrots, almonds, raisins and spring onions work together to create a gorgeous desserts\",\r\n"
 				+ "            \"foodType\": \"Veg\",\r\n"
-				+ "            \"numOfServings\": \"4\"\r\n"
+				+ "            \"numOfServings\": 4\r\n"
 				+ "        }\r\n"
 				+ "    ],\r\n"
 				+ "    \"message\": \"Successfully retrieved data!\",\r\n"
@@ -108,7 +108,7 @@ public class IntegrationTests {
 	@Order(4)
 	public void fetchRecipeByParamsTest() throws JSONException {
 		
-		 FoodInfo recipeOne = new FoodInfo("",0, "","Veg","");
+		 FoodInfo recipeOne = new FoodInfo("",0, "","Veg",0);
 		 
 		String expectedResp = "{\r\n"
 				+ "    \"data\": [\r\n"
@@ -117,7 +117,7 @@ public class IntegrationTests {
 				+ "            \"dishName\": \"Carrot Salad\",\r\n"
 				+ "            \"recipe\": \"Carrots, almonds, raisins and spring onions work together to create a gorgeous desserts\",\r\n"
 				+ "            \"foodType\": \"Veg\",\r\n"
-				+ "            \"numOfServings\": \"4\"\r\n"
+				+ "            \"numOfServings\": 4\r\n"
 				+ "        }\r\n"
 				+ "    ],\r\n"
 				+ "    \"message\": \"Successfully Retrieved data!\",\r\n"
@@ -141,7 +141,7 @@ public class IntegrationTests {
 	public void deleteRecipeTest() throws JSONException {
 		
 		 FoodInfo recipeOne = new FoodInfo("Carrot Salad",1, "Carrots, almonds, raisins and spring onions work together to create a gorgeous desserts",
-					"Veg","4");
+					"Veg",0);
 		 
 		String expectedResp = "{\r\n"
 				+ "    \"data\": {\r\n"
@@ -149,7 +149,7 @@ public class IntegrationTests {
 				+ "        \"dishName\": \"Carrot Salad\",\r\n"
 				+ "        \"recipe\": \"Carrots, almonds, raisins and spring onions work together to create a gorgeous desserts\",\r\n"
 				+ "        \"foodType\": \"Veg\",\r\n"
-				+ "        \"numOfServings\": \"4\"\r\n"
+				+ "        \"numOfServings\": 4\r\n"
 				+ "    },\r\n"
 				+ "    \"message\": \"Deleted!\",\r\n"
 				+ "    \"status\": 200\r\n"

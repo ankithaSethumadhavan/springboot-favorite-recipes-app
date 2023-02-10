@@ -19,6 +19,6 @@ public interface FoodRepository extends JpaRepository<FoodInfo, Integer>  {
 	            + " OR recipe = :recipe "
 	            + " OR num_of_servings = :numOfServings ",  nativeQuery = true)
 	public List<FoodInfo> findRecipeListsBasedOnParams(String dishName, String foodType, String recipe,
-			String numOfServings);
+			Integer numOfServings);
 
 }

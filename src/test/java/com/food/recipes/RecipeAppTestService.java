@@ -47,11 +47,11 @@ public class RecipeAppTestService {
     	try {
         List<FoodInfo> recipeList = new ArrayList<FoodInfo>();
         FoodInfo recipeOne = new FoodInfo("Butter Chicken",1, "This simplified version of the Indian classic combines chicken, tomato sauce, and a slew of aromatic spices and herbs",
-				"nonveg","4");
+				"nonveg",4);
         FoodInfo recipeTwo = new FoodInfo("Carrot Salad",2, "Carrots, almonds, raisins and spring onions work together to create a gorgeous desserts",
-				"veg","2");
+				"veg",2);
         FoodInfo recipeThree = new FoodInfo("Mix Veg Jeera Salad",3, "A lovely mix of spinach, carrots and potatoes, brightened with the peppery flavor of cumin",
-				"veg","1");
+				"veg",1);
          
         recipeList.add(recipeOne);
         recipeList.add(recipeTwo);
@@ -72,11 +72,11 @@ public class RecipeAppTestService {
     	try {
         List<FoodInfo> recipeList = new ArrayList<FoodInfo>();
         FoodInfo recipeOne = new FoodInfo("Butter Chicken",1, "This simplified version of the Indian classic combines chicken, tomato sauce, and a slew of aromatic spices and herbs",
-				"nonveg","4");
+				"nonveg",4);
         FoodInfo recipeTwo = new FoodInfo("Carrot Salad",2, "Carrots, almonds, raisins and spring onions work together to create a gorgeous desserts",
-				"veg","2");
+				"veg",2);
         FoodInfo recipeThree = new FoodInfo("Mix Veg Jeera Salad",3, "A lovely mix of spinach, carrots and potatoes, brightened with the peppery flavor of cumin",
-				"veg","1");
+				"veg",1);
          
         recipeList.add(recipeOne);
         recipeList.add(recipeTwo);
@@ -98,7 +98,7 @@ public class RecipeAppTestService {
     {
     	try {
         FoodInfo recipe = new FoodInfo("Pepper Chicken",4, "This simplified version of the Indian classic combines chicken, pepper, and a slew of aromatic spices and herbs",
-				"nonveg","3");
+				"nonveg",3);
          
         
         when(foodRecipeDao.save(recipe)).thenReturn(recipe);
@@ -115,7 +115,7 @@ public class RecipeAppTestService {
     {
     	try {
         FoodInfo recipe = new FoodInfo("Pepper Chicken",4, "This simplified version of the Indian classic combines chicken, pepper, and a slew of aromatic spices and herbs",
-				"nonveg","3");
+				"nonveg",3);
         
         foodRecipeService.deleteFoodDtls(recipe.getDishId());
         verify(foodRecipeDao,times(1)).delete(recipe);

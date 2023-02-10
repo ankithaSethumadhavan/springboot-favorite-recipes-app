@@ -45,7 +45,7 @@ public class FoodRecipeService {
 	    		String dishName= foodDetails.getDishName();
 	    		String foodType= foodDetails.getFoodType();
 	    		String recipe= foodDetails.getRecipe();
-	    		String numOfServings= foodDetails.getNumOfServings();
+	    		Integer numOfServings= (foodDetails.getNumOfServings()!=null?foodDetails.getNumOfServings():0);
 		        List<FoodInfo> foodDtls = foodRepository.findRecipeListsBasedOnParams(dishName,foodType,recipe,numOfServings);
 		        if (nonNull(foodDtls) && foodDtls.size()>0)
 		            return foodDtls;

@@ -3,7 +3,12 @@
  */
 package com.food.recipes.Entities;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 /**
@@ -25,10 +30,10 @@ public class FoodInfo {
 	@Column(name="FOOD_TYPE",length=10)
 	private String foodType;
 	@Column(name="NUM_OF_SERVINGS",length=5)
-	private String numOfServings;
+	private Integer numOfServings;
 	
 	
-	public FoodInfo(String dishName, Integer dishId, String recipe, String foodType, String numOfServings) {
+	public FoodInfo(String dishName, Integer dishId, String recipe, String foodType, Integer numOfServings) {
 		super();
 		this.dishName = dishName;
 		this.dishId = dishId;
@@ -98,13 +103,13 @@ public class FoodInfo {
 	/**
 	 * @return the numOfServings
 	 */
-	public String getNumOfServings() {
+	public Integer getNumOfServings() {
 		return numOfServings;
 	}
 	/**
 	 * @param numOfServings the numOfServings to set
 	 */
-	public void setNumOfServings(String numOfServings) {
+	public void setNumOfServings(Integer numOfServings) {
 		this.numOfServings = numOfServings;
 	}
 	

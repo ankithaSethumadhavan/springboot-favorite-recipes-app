@@ -1,9 +1,9 @@
 package com.food.recipes.Exception;
 
+import java.io.Serializable;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
-
-import java.io.Serializable;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class RecipeNotFoundException extends Exception implements Serializable {
